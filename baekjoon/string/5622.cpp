@@ -24,7 +24,7 @@ int main() {
 			sum += arr[6];
 		else if ('W' <= str[i] && str[i] <= 'Z')
 		    sum += arr[7];
-	   }
+	}
 	cout << sum;
 				  return 0;
 }
