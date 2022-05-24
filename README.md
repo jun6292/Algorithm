@@ -1,3 +1,2 @@
 # Algorithm
 c++
-python
