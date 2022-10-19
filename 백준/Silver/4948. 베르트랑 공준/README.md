@@ -1,4 +1,4 @@
-# [Silver II] 베르트랑 공준 - 4948 
+# [Silver III] 베르트랑 공준 - 4948 
 
 [문제 링크](https://www.acmicpc.net/problem/4948) 
 
