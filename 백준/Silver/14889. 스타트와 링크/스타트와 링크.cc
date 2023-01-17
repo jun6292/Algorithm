@@ -4,8 +4,8 @@
 using namespace std;
 
 int ans = -1, N;
-int arr[21][21] = { 0, };
-bool visited[21];
+int arr[20][20] = { 0, };
+bool visited[20];
 
 void dfs(int depth, int num) {
     if (depth == N / 2) {
@@ -19,15 +19,14 @@ void dfs(int depth, int num) {
                     link += arr[i][j];
             }
         }
-
-        int min = abs(start - link);
-        if (ans > min || ans == -1)
+        int min = abs(start - link);    // 스타트 팀과 링크 팀의 능력치 차이
+        if (ans > min || ans == -1)     // 처음 ans 계산과 능력치 차이의 최소
             ans = min;
     } else {
         for (int i = num; i < N; i++) {
             if (!visited[i]) {
                 visited[i] = true;
-                dfs(depth + 1, i + 1);
+                dfs(depth + 1, i + 1);  // 시간 초과 방지 + 중복방지, 오름차순 dfs
                 visited[i] = false;
             }
         }
