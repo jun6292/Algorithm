@@ -2,13 +2,10 @@
 # BABBA 백준 9625
 
 k = int(input())
-dp_a = [0] * (k + 1)
-dp_b = [0] * (k + 1)
-dp_a[0] = 1
-dp_b[1] = 1
+dp = [0] * (k + 1)
+dp[1] = 1
 
 for i in range(2, k + 1):
-    dp_a[i] = dp_a[i - 1] + dp_a[i - 2]
-    dp_b[i] = dp_b[i - 1] + dp_b[i - 2]
+    dp[i] = dp[i - 1] + dp[i - 2]
 
-print(dp_a[k], dp_b[k])
+print(dp[k - 1], dp[k])
