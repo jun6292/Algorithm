@@ -6,7 +6,7 @@
 n = int(input())
 numbers = list(map(int, input().split()))
 calc = list(map(int, input().split()))
-max_value, min_value = -1e9, 1e9
+max_value, min_value = -float("INF"), float("INF")
 
 visited = [False] * n
 def dfs(num, depth):
